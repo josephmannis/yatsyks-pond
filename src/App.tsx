@@ -1,25 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './root.css';
+import PondPage from './components/pages/PondPage';
+import messages from './assets/messages.json';
+
+const INIT = 'I am the toad of encouragement.\nMy love for you is boundless.\nPoke me for some encouragement.';
+const MESSAGES = messages;
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <PondPage initialMessage={INIT} responses={MESSAGES}/>
   );
 }
 
